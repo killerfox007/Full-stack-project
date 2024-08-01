@@ -5,11 +5,6 @@ import { Link } from "react-router-dom";
 const RecipeList = () => {
   const [recipes, setRecipes] = useState([]) 
 
-
-  // function filterRecipes(id){
-  //   const updatedRecipes = recipes.filter(recipe => recipe.id !== id)
-  //   setRecipes(updatedRecipes)
-  // }
   function handleClick(e){
     fetch("http://127.0.0.1:5555/" + "recipes/" + e.target.value, {
       method: "DELETE"
